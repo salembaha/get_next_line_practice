@@ -5,11 +5,19 @@ static char	*read_to_stash(int fd, char *stash);
 static char	*extract_line(char *stash);
 static char	*stash_after_line(char *stash);
 //
+
 char	get_next_line(int fd)
 {
-	if (!fd)
-	{
-		
-	}
-	return (0);
+	static char	*stash;
+	char		line;
+
+	stash = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return NULL;
+	stash = read_to_stash(fd, stash);
+	if (!stash)
+		return NULL;
+	line = extract_line(stash);
+	stash = stash_after_line(stash);
+	return (line);
 }
