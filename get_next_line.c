@@ -6,3 +6,10 @@ static char	*extract_line(char *stash);
 static char	*stash_after_line(char *stash);
 //
 char	get_next_line(int fd)
+{
+	if (!fd)
+	{
+		
+	}
+	return (0);
+}
