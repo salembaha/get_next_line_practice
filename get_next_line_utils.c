@@ -6,7 +6,7 @@
 /*   By: sabahass <sabahass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/07 07:55:28 by sabahass          #+#    #+#             */
-/*   Updated: 2025/09/07 08:35:31 by sabahass         ###   ########.fr       */
+/*   Updated: 2025/09/07 09:14:39 by sabahass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strchr_gnl(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin_gnl(const char *s1, const char *s2)
+char	*ft_strjoin_gnl(char *s1, const char *s2)
 {
 	size_t	len_1;
 	size_t	len_2;
